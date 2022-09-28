@@ -1,18 +1,22 @@
 #include<stdio.h>
-int reverse(int k,int n,)
+int sum=0,r;
+int reverse(int n)
 {
-  n=n%10;
-  sum=sum+n
-
+  if(n>0)
+{
+  r=n%10;
+  sum=sum*10+r;
+return reverse(n/10);
+}
+else{
+  return sum;
+}
 }
 int main()
 {
-  int k=0,n;
+  int k,n;
   printf("enter the number");
   scanf("%d",&n); 
-  while(n>0)
-  {
-    n=n/10;
-    k++;
-  }
+  k=reverse(n);
+  printf("%d",k);
 }
