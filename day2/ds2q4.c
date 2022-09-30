@@ -10,6 +10,8 @@ void diff(int a[],int m,int b[],int n)
       if(a[i]==b[j])
       {
         i++;
+        break;
+      
       } 
       else{
 c[k]=a[i];
@@ -40,7 +42,7 @@ k++;
 int main()
 {
     int a[5]={1,2,3,4,5};
-    int b[5]={3,4,5,6,7};
+    int b[5]={5,6,7,8,9};
     int c[10],z,k;
    diff(a,5,b,5);
 
